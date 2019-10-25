@@ -7,8 +7,8 @@ class Games(models.Model):
     name = models.CharField(max_length=200, verbose_name='Название')
     nameoriginal = models.CharField(max_length=200, verbose_name='Оригинальное название')
     have = models.BooleanField(verbose_name='Наличие игры')
-    min_player = models.ImageField()
-    max_player = models.ImageField()
+    min_player = models.IntegerField()
+    max_player = models.IntegerField()
     disc = models.TextField(verbose_name='Описание')
 
     def __str__(self):
